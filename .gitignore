@@ -16,6 +16,8 @@ dist-ssr
 /cypress/videos/
 /cypress/screenshots/
 
+.eslintcache
+
 # Editor directories and files
 .vscode
 !.vscode/extensions.json
