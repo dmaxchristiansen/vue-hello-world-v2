@@ -1,18 +1,10 @@
-# vue-hello-world-v2
+# Vue.js v2 Sandbox
 
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
+## Quick Start 🚀
 
 ```sh
+git clone https://github.com/dmaxchristiansen/vue-hello-world-v2.git
+cd vue-hello-world-v2
 npm install
 ```
 
@@ -28,21 +20,52 @@ npm run dev
 npm run build
 ```
 
-### Run Headed Component Tests with [Cypress Component Testing](https://on.cypress.io/component)
+<br/>
+
+## Contributing 🧑🏽‍💻
+
+### Branch Names
+
+Branch off of **main** for local development. Please ensure your local version of **main** is current with the remote.
+
+Your branch name **must be prepended with VHW2-** followed by the corresponding GitHub issue number. For example:
 
 ```sh
-npm run test:unit # or `npm run test:unit:ci` for headless testing
+git checkout -b VHW2-87
 ```
+
+Create an issue on [this repository's project board](https://github.com/users/dmaxchristiansen/projects/3/) to obtain an issue number.
+
+### Commits
+
+Commit messages **must begin with a reference to the branch name**. For example:
+
+```sh
+git commit -m "VHW2-87 Abstract foo method to utils file"
+```
+
+Linting and formatting of staged files, as well as branch name and commit message syntax enforcement, is executed via husky pre-commit hooks. 
+
+<br/>
+
+## Testing 🧪
 
 ### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
 
+In one terminal tab run:
+
 ```sh
-npm run build
-npm run test:e2e # or `npm run test:e2e:ci` for headless testing
+npm run dev
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+After the dev server is built, in another terminal tab run:
 
 ```sh
-npm run lint
+npm run cy:open
+```
+
+### Run Headed Component Tests with [Cypress Component Testing](https://on.cypress.io/component)
+
+```sh
+coming soon...
 ```
