@@ -1,0 +1,51 @@
+{
+  "name": "vue-hello-world-v2",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 4173",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:ci": "start-server-and-test dev http://localhost:5173/ cy:run",
+    "cy:unit": "cypress open --component",
+    "cy:unit:ci": "cypress run --component --quiet --reporter spec",
+    "lint": "eslint './**/*.{vue,js,jsx}'",
+    "lint:fix": "eslint './**/*.{vue,js,jsx}' --fix",
+    "format": "prettier --write \"**/*.{vue,js,jsx,json,md}\"",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "pinia": "^2.0.16",
+    "vue": "^2.7.7",
+    "vue-router": "^3.5.4"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.4.4",
+    "@vitejs/plugin-legacy": "^2.0.0",
+    "@vitejs/plugin-vue2": "^1.1.2",
+    "@vitejs/plugin-vue2-jsx": "^1.0.2",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "cypress": "^10.3.0",
+    "enforce-branch-name": "^1.1.2",
+    "eslint": "^8.5.0",
+    "eslint-plugin-cypress": "^2.12.1",
+    "eslint-plugin-vue": "^9.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.2",
+    "prettier": "^2.5.1",
+    "start-server-and-test": "^1.14.0",
+    "terser": "^5.14.2",
+    "vite": "^3.0.2"
+  },
+  "lint-staged": {
+    "*.{vue,js,jsx}": [
+      "eslint --cache --fix",
+      "prettier --write"
+    ]
+  },
+  "engines": {
+    "node": "18.12.0",
+    "npm": "8.19.2"
+  }
+}
