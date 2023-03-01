@@ -1,19 +1,15 @@
 {
+  "author": "Daniel Max Christiansen <dmaxchristiansen@gmail.com>",
+  "description": "A Vue.js v2 Sandbox",
   "name": "vue-hello-world-v2",
+  "private": false,
   "version": "0.0.0",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview --port 4173",
-    "cy:open": "cypress open",
-    "cy:run": "cypress run",
-    "cy:ci": "start-server-and-test dev http://localhost:5173/ cy:run",
-    "cy:unit": "cypress open --component",
-    "cy:unit:ci": "cypress run --component --quiet --reporter spec",
-    "lint": "eslint './**/*.{vue,js,jsx}'",
-    "lint:fix": "eslint './**/*.{vue,js,jsx}' --fix",
-    "format": "prettier --write \"**/*.{vue,js,jsx,json,md}\"",
-    "prepare": "husky install"
+  "engines": {
+    "node": "18.12.0",
+    "npm": "8.19.2"
+  },
+  "repository": {
+    "type": "git"
   },
   "dependencies": {
     "pinia": "^2.0.16",
@@ -38,14 +34,40 @@
     "terser": "^5.14.2",
     "vite": "^3.0.2"
   },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 4173",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:ci": "start-server-and-test dev http://localhost:5173/ cy:run",
+    "cy:unit": "cypress open --component",
+    "cy:unit:ci": "cypress run --component --quiet --reporter spec",
+    "lint": "eslint './**/*.{vue,js,jsx}'",
+    "lint:fix": "eslint './**/*.{vue,js,jsx}' --fix",
+    "format": "prettier --write \"**/*.{vue,js,jsx,json,md}\"",
+    "prepare": "husky install"
+  },
+  "commitlint": {
+    "rules": {
+      "references-empty": [
+        2,
+        "never"
+      ]
+    },
+    "parserPreset": {
+      "parserOpts": {
+        "referenceActions": null,
+        "issuePrefixes": [
+          "VHW2-"
+        ]
+      }
+    }
+  },
   "lint-staged": {
     "*.{vue,js,jsx}": [
       "eslint --cache --fix",
       "prettier --write"
     ]
-  },
-  "engines": {
-    "node": "18.12.0",
-    "npm": "8.19.2"
-  }
+  }  
 }
